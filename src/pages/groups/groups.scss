@@ -1,0 +1,19 @@
+@import 'src/main';
+
+.group-section {
+  padding: 1rem;
+  .create-groups-panel {
+    div img {
+      width: 3.5rem;
+      height: 3.5rem;
+      background: $card-header-color;
+      border-radius: 50%;
+      padding: 0.8rem;
+    }
+
+    div.create-groups-panel-heading {
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+  }
+}

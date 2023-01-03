@@ -1,0 +1,28 @@
+.channel-delete-card {
+  padding: 2rem;
+  color: white;
+  background: #1B1C23;
+  border: 2px solid rgba(19, 99, 223, 0.8);
+  border-radius: 6px;
+
+  p {
+
+    font-size: 2rem;
+    align-self: center;
+    font-weight: 400;
+
+  }
+
+  div {
+    align-self: center;
+    display: flex;
+    justify-content: end;
+    width: 84%;
+    overflow: hidden !important;
+  }
+}
+
+.channel-container {
+  border-radius: 10px !important;
+
+}

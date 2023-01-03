@@ -1,0 +1,95 @@
+@import 'src/main';
+
+.login-form {
+  margin: 7rem 0;
+  margin-bottom: 0rem;
+
+
+  .login-error {
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    div {
+      label {
+        font-size: 1.5rem;
+        margin-bottom: 0.7rem;
+      }
+      input {
+        background: $auth-input-bg;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        padding: 0.5rem 1rem;
+
+        color: rgba(255, 255, 255, 0.7) !important;
+
+
+        border: 0.5px solid rgba(255, 255, 255, 0.44);
+        border-radius: 8px;
+
+
+        &:focus {
+          background: $auth-input-bg;
+        }
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.7);
+          font-size: 13px;
+
+        }
+
+        &:active {
+          color: rgba(255, 255, 255, 0.7);
+        }
+      }
+
+    }
+
+    .button{
+      button {
+        margin: 1rem 0;
+        font-weight: 600;
+        padding: 0.7rem;
+
+      }
+    }
+
+    .or-section {
+      .or-line {
+        height: 1px;
+        width: 35%;
+        background: $primary_color;
+      }
+    }
+
+    .social-icons {
+      button {
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        background: #FFFFFF;
+        border-radius: 50%;
+        border: 2px solid #377FAE;
+        img {
+          width: 2rem;
+          height: 2rem;
+
+
+        }
+      }
+
+      .fb {
+        img {
+          margin: 0 0.5rem;
+          width: 1rem;
+          height: 2rem;
+
+        }
+      }
+    }
+  }
+}

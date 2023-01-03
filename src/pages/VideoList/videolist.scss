@@ -1,0 +1,80 @@
+.videolist-main {
+  padding: 2rem;
+  padding-left: 3rem;
+
+
+  .search-input {
+    outline: none;
+    border: none;
+    padding: 1rem;
+  }
+
+  .input-group-text {
+    padding: 0 2rem !important;
+    background: #222432 !important;
+    border: 0 !important;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+
+
+  }
+
+
+  .form-floating {
+    background: #222432 !important;
+
+
+  }
+
+  input {
+    width: 99% !important;
+    background: #222432;
+    color: white;
+    font-size: 1.5rem !important;
+
+  }
+
+  .searchicon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .search {
+    background: transparent !important;
+
+    .color-second {
+      background: #222432 !important;
+      padding: 0.5rem 0;
+    }
+  }
+
+  .radius-video-card {
+    border-radius: 1rem;
+  }
+  .selectpicker {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 6px;
+    border: none;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+
+  }
+  .select-picker-option {
+      //background: rgba(255, 255, 255, 0.18) !important;
+    background: #2E324E;
+    }
+
+  .video-list-pagination {
+    margin: 0px 15px;
+    button {
+      background: transparent;
+
+      img {
+        height: 5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.container-bg {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  //width: 82%;
+  word-break: break-all;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.bloc-tabs {
+  display: flex;
+  background:  #1B1C23;
+
+}
+
+.tabs {
+
+  padding: 15px;
+  text-align: center;
+  width: 50%;
+  background: rgba(128, 128, 128, 0.075);
+  cursor: pointer;
+  //border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+  background:  #1B1C23;
+}
+
+.active-tabs {
+  background: #222432;
+  border: 0px;
+  border-bottom: 5px solid #222432;
+
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+
+}
+
+
+//.active-tabs::before {
+//  content: "";
+//  display: block;
+//  position: absolute;
+//  top: -5px;
+//  left: 50%;
+//  transform: translateX(-50%);
+//  width: calc(100% + 2px);
+//  height: 5px;
+//  background: rgb(88, 147, 241);
+//}
+
+
+button {
+  border: none;
+  color: white;
+  font-size: 1.3rem !important;
+  font-weight: 500;
+
+}
+
+.content-tabs {
+  float: left;
+
+  overflow-y: auto;
+
+
+  flex-grow: 1;
+  background: #222432;
+}
+
+.content {
+
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: #222432;
+  margin-top: 1.3rem;
+}
+
+
+
+.content h2 {
+  padding: 0px 0 5px 0px;
+}
+
+.content hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+
+
+
+.active-content {
+  display: block;
+}

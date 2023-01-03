@@ -1,0 +1,106 @@
+
+.listcard {
+  //background: red;
+  background: #2E324E !important;
+
+  border: 0 !important;
+  height: 13rem;
+  width: 100%;
+  border-radius: 6px;
+
+
+  /* Element | http://localhost:3000/video/list */
+
+
+  margin-left: 0px;
+  margin-right: 0px;
+
+
+  /* Element | http://localhost:3000/video/list */
+
+
+  padding-left: 0px;
+  margin-right: 0px;
+  padding-right: 0px;
+
+
+
+}
+
+p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0 !important;
+  //padding-bottom: 5px;
+
+}
+
+h3 {
+  margin-bottom: 0.8rem;
+  font-size: 2rem;
+}
+
+.img-thumbnail-0 {
+  //border-radius: 6px;
+  //border: 0;
+  border-width: 0px;
+  img {
+
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    height: 13rem;
+  }
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.icon-channel {
+  width: 1.5rem;
+  height: 1.8rem;
+}
+
+.channel {
+  margin-top: 10px;
+}
+
+.first-side {
+  width: 70%;
+  padding: 0 !important;
+
+}
+
+.second-side {
+  width: 20%;
+  //background: lightblue;
+}
+
+.icon-card {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.second-side {
+
+;
+  button {
+    border: 0;
+    outline: 0;
+    width: 100%;
+
+  ;
+
+    padding: 0.5rem 6rem;
+    font-weight: 400 !important;
+    border-radius: 3px;
+    background: #1363DF;
+    color: white;
+    font-size: 20px !important;
+
+  ;
+  }
+
+  display: none;
+}

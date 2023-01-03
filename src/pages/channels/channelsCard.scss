@@ -1,0 +1,77 @@
+@import 'src/main';
+
+.group-channel-card {
+
+  width: 29rem;
+  overflow: hidden;
+  background: transparent !important;
+  .card-header {
+    padding: 1rem 1.5rem;
+    background: $card-header-color;
+    border-radius: 10px 10px 0px 0px !important;
+
+    .card-avatar-icon {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .title {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+
+    div.edit , div.delete {
+      .card-side-icon {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  .card-body {
+    height: 12rem;
+    background: $secondary_color;
+    padding: 1rem 1.2rem;
+    border-radius: 0px 0px 10px 10px  !important;
+    background: #222432;
+    mix-blend-mode: normal;
+    border: 0.5px solid rgba(255, 255, 255, 0.44);
+    border-radius: 5px;
+    border-top: 0;
+
+    .card-title {
+      padding-top: 0.5rem ;
+      font-weight: 500;
+      font-size: 1.5rem;
+    }
+
+    p {
+      padding: 0.5rem 0;
+      padding-bottom: 1rem;
+      font-size: 1.2rem;
+      span {
+        font-weight: 600;
+      }
+      font-weight: 400;
+    }
+
+    .footer {
+
+      button {
+        background: transparent;
+        img {
+          width: 2rem;
+          height: 2rem;
+          background: $card-header-color;
+          border-radius: 50%;
+          //padding: 0.8rem;
+          padding: .3rem;
+        }
+      }
+      font-weight: 300;
+      font-size: 1.5rem;
+      padding-top: 0.5rem;
+    }
+  }
+
+}

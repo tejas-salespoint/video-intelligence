@@ -1,0 +1,245 @@
+import React from 'react';
+import './uploadvideo.scss'
+import Box from "../../components/Box/Box";
+import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
+import {UploadVideoIcon} from "../../contants";
+import {Button} from "react-bootstrap";
+import {Formik} from "formik";
+
+
+function UploadVideo(props) {
+    // Create a reference to the hidden file input element
+    const hiddenFileInput = React.useRef(null);
+    const handleClick = event => {
+        hiddenFileInput.current.click();
+    };
+
+    const handleChange = event => {
+        const fileUploaded = event.target.files[0];
+        
+    };
+
+    return (
+        <Box>
+            <BreadCrumb root='Upload Video' path='Administrator'/>
+            <div className='upload-video-section'>
+
+                {/*formik*/}
+                <Formik initialValues={{
+                    videoUrl : ""
+                }} onSubmit={(values) => {
+                    <form className="card">
+                        <div className="card-header">Add Videos</div>
+                        <div className="card-body">
+                            <div className='card-body-inner'>
+                                <div className='card-body-inner-upload-button d-flex flex-column align-items-center justify-content-center gap-4'>
+
+
+                                    <img className='upload-button-icon' src={UploadVideoIcon} alt="UploadVideoIcon" />
+                                    <div className='d-flex flex-column align-items-center'>
+
+                                        <p>Drag and Drop here</p>
+                                        <p>OR </p>
+                                    </div>
+                                    <Button onClick={handleClick}>
+                                        Browse Files
+                                    </Button>
+                                    <input
+                                        type="file"
+                                        ref={hiddenFileInput}
+                                        onChange={handleChange}
+                                        style={{display: 'none'}} />
+                                </div>
+
+                            </div>
+                            <div className='card-body-inner-form'>
+                                <div className="row">
+                                    <div className="col-3">
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            placeholder="Video Name"
+                                            aria-label="Video Name"
+                                        />
+                                    </div>
+                                    <div className="col-3">
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            placeholder="Description"
+                                            aria-label="Description"
+                                        />
+                                    </div>
+                                    <div className="col-3">
+                                        <select className="form-select" aria-label="Default select example">
+                                            <option selected>Select Channel</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div className="col-3">
+                                        <div className="d-flex align-items-center ">
+                                            <div className="upload-btn flex-grow-1">
+                                                <button>upload video</button>
+                                            </div>
+                                            <div className="cancel-btn flex-grow-1">
+
+                                                <button>cancel</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </form>
+
+                </Formik>
+
+            </div>
+        </Box>
+    );
+}
+
+export default UploadVideo;
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------->
+
+import React, {useEffect} from 'react';
+import './uploadvideo.scss'
+import Box from "../../components/Box/Box";
+import BreadCrumb from "../../components/breadcrumb/BreadCrumb";
+import {UploadVideoIcon} from "../../contants";
+
+import {Formik , Form} from "formik";
+import {Button ,  Input} from "reactstrap";
+
+
+function UploadVideo(props) {
+    const URL = "https://api.videoindexer.ai/trial/Accounts/e0b6c1fd-e2e7-49fa-b9ff-671c35d414a0/Videos?name=video-website&privacy=Private&description=video_website&language=English&fileName=video_website&indexingPreset=Default&streamingPreset=Default&sendSuccessEmail=false&accessToken=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJBY2NvdW50SWQiOiJlMGI2YzFmZC1lMmU3LTQ5ZmEtYjlmZi02NzFjMzVkNDE0YTAiLCJQZXJtaXNzaW9uIjoiT3duZXIiLCJFeHRlcm5hbFVzZXJJZCI6IjE3OTI1MDlFQjZERTRDMjBCMjAzOTEzRDlEOUI3NDdBIiwiVXNlclR5cGUiOiJNaWNyb3NvZnRDb3JwQWFkIiwiSXNzdWVyTG9jYXRpb24iOiJUcmlhbCIsIm5iZiI6MTY2NzUzOTAyOCwiZXhwIjoxNjY3NTQyOTI4LCJpc3MiOiJodHRwczovL2FwaS52aWRlb2luZGV4ZXIuYWkvIiwiYXVkIjoiaHR0cHM6Ly9hcGkudmlkZW9pbmRleGVyLmFpLyJ9.nCL6MWhPLBJJCfCaP30fVrapAEim6tFynzQi95s00Yc"
+    // Create a reference to the hidden file input element
+    const hiddenFileInput = React.useRef(null);
+    const handleClick = event => {
+        hiddenFileInput.current.click();
+    };
+
+    const handleChange = event => {
+        const fileUploaded = event.target.files[0];
+        
+    };
+
+    return (
+        <Box>
+            <BreadCrumb root='Upload Video' path='Administrator'/>
+            <div className='upload-video-section'>
+
+                {/*formik*/}
+                <Formik initialValues={{
+                    videoUrl : ""
+                }} onSubmit={(values) => {
+                    let data = new FormData();
+
+
+                    data.append("videoUrl", values.videoUrl)
+                    return fetch(URL, { method : "post" , headers: new Headers({ Accept : "application/json"}) , body : data }).then(response => response.json()).then(data => 
+                    
+                } }>
+                    {
+                        (formProps) => (
+                            <Form className="card">
+                                <div className="card-header">Add Videos</div>
+                                <div className="card-body">
+                                    <div className='card-body-inner'>
+                                        <div className='card-body-inner-upload-button d-flex flex-column align-items-center justify-content-center gap-4'>
+
+
+                                            <img className='upload-button-icon' src={UploadVideoIcon} alt="UploadVideoIcon" />
+                                            <div className='d-flex flex-column align-items-center'>
+
+                                                <p>Drag and Drop here</p>
+                                                <p>OR </p>
+                                            </div>
+                                            {/*<Button>*/}
+                                            {/*    Browse Files*/}
+                                            {/*</Button>*/}
+                                            <input
+                                                type={"file"} name={"videoUrl"} onChange={(event) => formProps.setFieldValue("videoUrl" , event.target.files[0])}
+
+                                            />
+                                        </div>
+
+                                    </div>
+                                    <div className='card-body-inner-form'>
+                                        <div className="row">
+                                            <div className="col-3">
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="Video Name"
+                                                    aria-label="Video Name"
+                                                />
+                                            </div>
+                                            <div className="col-3">
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    placeholder="Description"
+                                                    aria-label="Description"
+                                                />
+                                            </div>
+                                            {/*<div className="col-3">*/}
+                                            {/*    <select className="form-select" aria-label="Default select example">*/}
+                                            {/*        <option selected>Select Channel</option>*/}
+                                            {/*        <option value="1">One</option>*/}
+                                            {/*        <option value="2">Two</option>*/}
+                                            {/*        <option value="3">Three</option>*/}
+                                            {/*    </select>*/}
+                                            {/*</div>*/}
+                                            <div className="col-3">
+                                                <div className="d-flex align-items-center ">
+                                                    <div className="upload-btn flex-grow-1">
+                                                        <button type='submit'>upload video</button>
+                                                    </div>
+                                                    <div className="cancel-btn flex-grow-1">
+
+                                                        <button>cancel</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </Form>
+                           // <Form>
+                           //     {/*FIELD GET A VALUE AS A STRING NOT A FILE */}
+                           //     {/*<Input type={"file"} name={"videoUrl"} onChange={formProps.handleChange("videoUrl")} />*/}
+                           //
+                           //     <Input type={"file"} name={"videoUrl"} onChange={(event) => formProps.setFieldValue("videoUrl" , event.target.files[0])} />
+                           //
+                           //
+                           //     <Button type="submit">submit</Button>
+                           // </Form>
+                        )
+                    }
+
+
+                </Formik>
+
+            </div>
+        </Box>
+    );
+}
+
+export default UploadVideo;

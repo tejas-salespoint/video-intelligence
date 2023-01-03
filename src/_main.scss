@@ -1,0 +1,61 @@
+
+$primary_color: #3264B1;
+$secondary_color: #222432;
+$third_color: #121217;
+$card-header-color : #1363DF;
+$card-second-header-color : #1C1D24;
+
+$auth-bg : #1B1C25;
+$auth-input-bg : #272934;
+
+$input-bg-color : #393B50;
+
+//
+//--primary-color :  #3264B1;;
+//--secondary-color : #222432;
+//--third-color : #121217;
+
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+
+.instructions > svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#uidnote {
+  font-size: 1rem;
+}

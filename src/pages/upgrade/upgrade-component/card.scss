@@ -1,0 +1,61 @@
+@import 'src/main';
+
+.update-card {
+
+  width: 29rem;
+  overflow: hidden;
+  background: transparent !important;
+  .card-header {
+    padding: 1rem 1.5rem;
+    background: $card-header-color;
+    border-radius: 10px 10px 0px 0px !important;
+
+    .card-avatar-icon {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .title {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+
+
+    div.edit , div.delete {
+      .card-side-icon {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  .card-body {
+    background: $secondary_color;
+    padding: 1rem 1.2rem;
+    border-radius: 0px 0px 10px 10px  !important;
+    background: #222432;
+    mix-blend-mode: normal;
+    border: 0.5px solid rgba(255, 255, 255, 0.44);
+    border-radius: 5px;
+    border-top: 0;
+
+    .card-title {
+      font-weight: 500;
+    }
+
+    p {
+      padding: 1rem 0;
+      font-size: 1.3rem;
+      span {
+        font-weight: 600;
+      }
+      font-weight: 400;
+    }
+
+    .footer {
+      font-weight: 300;
+      font-size: 1.5rem;
+      padding-top: 0.5rem;
+    }
+  }
+
+}

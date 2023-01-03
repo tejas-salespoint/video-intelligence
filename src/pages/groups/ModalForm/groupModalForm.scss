@@ -1,0 +1,69 @@
+@import 'src/main';
+
+.group-modal {
+
+}
+
+
+
+.group-header {
+  background: $card-header-color ;
+  border: 0 !important;
+}
+
+.group-body {
+  background:  $auth-bg;
+  padding: 2rem !important;
+
+  .groupform {
+    padding: 1rem 3rem;
+
+    .form-first-section-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+
+    label {
+      font-size: 1.5rem;
+
+    }
+
+    input , textarea , select {
+      background: $input-bg-color;
+      border: 0;
+      outline: 0;
+      border-radius: 2px;
+      color: white;
+      font-size: 1.3rem;
+
+      &::placeholder {
+        color: grey;
+        font-size: 1.3rem;
+
+      }
+    }
+  select {
+    &::selection {
+      color: white !important;
+      font-size: 1.3rem;
+    }
+  }
+
+    .file-upload {
+      label {
+        width: 3rem;
+        height: 2rem;
+      }
+    }
+
+  }
+
+
+}
+
+.group-footer {
+  background:  $secondary_color !important;
+  border: 0 !important;
+}

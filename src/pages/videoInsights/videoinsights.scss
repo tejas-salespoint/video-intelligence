@@ -1,0 +1,17 @@
+
+
+.video-insights {
+  display: flex;
+  gap: 2.5rem;
+
+  .video-player {
+    flex: 7;
+
+  }
+
+  .video-analysis {
+    flex: 5;
+
+  }
+}
+

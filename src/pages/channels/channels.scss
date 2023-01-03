@@ -1,0 +1,66 @@
+@import 'src/main';
+
+.channel-section {
+  padding: 1rem;
+  .create-channel-panel {
+    div img {
+      width: 3.5rem;
+      height: 3.5rem;
+      background: $card-header-color;
+      border-radius: 50%;
+      padding: 0.8rem;
+    }
+
+    div.create-channel-panel-heading {
+      font-size: 2.2rem;
+      font-weight: 400;
+    }
+  }
+
+  .breaker{
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: grey;
+  }
+
+  .channel_new_section{
+
+
+    button {
+      background: none;
+      border: none;
+
+      img {
+        height: 2.5rem;
+        width: 2.5rem;
+      }
+    }
+  }
+}
+
+.filter-container {
+
+}
+
+.filter-section {
+
+
+
+  button {
+    background: none;
+    border: none;
+
+    img {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+
+  .breaker{
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: grey;
+  }
+}

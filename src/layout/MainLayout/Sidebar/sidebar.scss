@@ -1,0 +1,113 @@
+.sidebar {
+  background: linear-gradient(177.21deg, #3264b1 0%, #143992 99.83%, #1363df 99.84%);
+  box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.3);
+  flex: 1.2;
+  position: fixed;
+  width: 25rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  min-height: 100vh;
+
+  .side-icon {
+    margin-left: 3rem !important;
+    height: 24px;
+    width: 24px;
+  }
+
+  .top {
+    height: 10rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .brand_logo {
+      width: 5rem;
+      height: 4.3rem;
+
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  .center {
+    .items {
+
+      margin-left: 0;
+
+      padding-left: 0;
+
+      .item {
+        font-size: 1.7rem;
+        color: white;
+        //margin: 0 1rem;
+        //padding: 0 0.8rem;
+
+
+        Link {
+          color: white;
+        }
+      }
+
+      .item-active {
+        background: rgba(255, 255, 255, 0.23);
+        border-right: 10px solid white;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .logout-button {
+    padding-left: 0 !important;
+    margin-bottom: 0px;
+
+    .btn-primary {
+      width: 100%;
+      padding: 1.5rem;
+      font-weight: 600;
+      font-size: 1.5rem !important;
+    }
+  }
+}
+
+
+a {
+  color: white !important;
+}
+
+
+/* Element | http://localhost:3000/channels */
+
+ul.item {
+
+  padding-left: 0 !important;
+  margin-bottom: 0px;
+}
+
+/* Element | http://localhost:3000/channels */
+
+.btn-primary {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+/* Inline #2 | http://localhost:3000/channels */
+
+a.active {
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.23);
+  border-right: 10px solid white;
+
+}

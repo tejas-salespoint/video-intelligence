@@ -1,0 +1,66 @@
+@import "src/main";
+
+.upgrade {
+
+  .small-tag {
+
+    display: flex;
+
+
+    .small-tag-col {
+      margin: 1rem 1rem;
+      background-color: $secondary_color;
+      border-radius: 7px ;
+      padding: 0.7rem 1rem;
+
+      p {
+        font-weight: 600;
+        font-size: 1.5rem;
+      }
+
+
+      .drop-line {
+
+        width: 2px;
+        background-color: white;
+        height: 20px;
+        content: '';
+
+
+      }
+    }
+
+    .small-tag-col:first-child {
+      flex: 1;
+    }
+
+    .small-tag-col:nth-child(2) {
+      flex: 1;
+    }
+
+    .small-tag-col:nth-child(3) {
+      flex: 1;
+    }
+
+    .small-tag-col:nth-child(4) {
+      flex: 1;
+    }
+
+    .small-tag-col:nth-child(5) {
+      flex: 1;
+    }
+
+
+
+    Col {
+
+
+      .drop-line:before {
+        content: '';
+        width: 5px;
+        height: 20px;
+
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+.profile {
+  display: flex;
+
+  .ProfileContainer {
+    // background-color: lightblue;
+    flex: 6;
+
+    .main {
+      margin: 2rem;
+    }
+  }
+}
+
+// main container
+.mainContainer {
+  padding: 3rem;
+  .editProfile {
+    background-color: #1C1D24;
+
+    width: 40rem;
+    height: 30rem;
+
+    p {
+      font-weight: 500;
+    }
+
+    .avatar {
+      width: 10.5rem;
+      height: 10.5rem;
+      margin: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .forms {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin: 0.7rem;
+        display: flex;
+
+        align-items: center;
+      }
+      .checkmark {
+        margin-right: 5rem;
+        padding: 1rem;
+      }
+    }
+  }
+
+  .Notification {
+    background-color: #1C1D24;
+    width: 40rem;
+height: 34rem;
+margin-top: 1rem ;
+  }
+
+  .fillDetails {
+    background-color: #1C1D24;
+    height: 65rem;
+    width: 81.5rem;
+  }
+
+  .photo-upload-section  {
+    .photo-upload-input {
+      input  {
+        border-radius: 2rem;
+      }
+    }
+
+    .photo-upload-input-button {
+      border-radius: 4rem;
+      width: 26rem;
+      margin-top : 2rem
+    }
+  }
+}
+
+// custom styling
+.custom-radio-btn {
+  --size: 25px;
+  min-width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  cursor: pointer;
+  /* changes from the video   */
+
+  // margin: 0 10px;
+
+  padding-left: var(--size);
+}
+
+.custom-radio-btn input {
+  display: none;
+}
+
+/* handle if you want label on the left of the checkmark instead */
+
+.custom-radio-btn.left {
+  padding-left: 0;
+  padding-right: var(--size);
+}
+
+/* label  */
+
+.custom-radio-btn .label {
+  margin-left: 5px;
+}
+
+.custom-radio-btn.left .label {
+  margin: 0 5px;
+}
+
+.custom-radio-btn[aria-label]::after {
+  content: attr(aria-label);
+  display: inline-block;
+  margin-left: 5px;
+}
+
+/* checkmark */
+
+.custom-radio-btn .checkmark {
+  --gap: 3px;
+  --border: 2px;
+  --check-color: #00c4ff;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  background: #117498;
+  /* changes from the video  */
+
+  border: var(--border) solid #00c4ff;
+  padding: var(--gap);
+}
+
+.custom-radio-btn.left .checkmark {
+  left: auto;
+  right: 0;
+}
+
+.custom-radio-btn input:checked ~ .checkmark {
+  /* changes from the video  */
+
+  /*  content box origin will make sure the bg-image only stays inside content area in between padding  */
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(
+    circle at center,
+    var(--check-color)
+      /* the size of the check mark is determined by subtracting from the size of the circle
+     the border(both sides) and the gap(both sides) than dividing it by 2 to get the radius of the circle        */
+      calc((var(--size) - (var(--border) * 2) - (var(--gap) * 2)) / 2),
+    rgba(255, 255, 255, 0) 0
+  );
+
+
+
+}

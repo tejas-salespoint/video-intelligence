@@ -1,0 +1,59 @@
+
+
+.profileTabs {
+
+  label {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+
+  }
+
+  input , textarea , select {
+    background-color: #272934;
+    color: white;
+    font-size: 1.3rem;
+    padding: 1rem;
+
+    border: none !important;
+    border-radius: 8px;
+  }
+
+  input::placeholder , textarea::placeholder , select::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.3rem;
+  }
+
+  select:after {
+    color: white;
+    background-color: white;
+  }
+  input:focus , textarea:focus , select:focus {
+    background-color: #272934 !important;
+    color: white;
+  }
+
+  button {
+    border: 1px solid white;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.6rem !important;
+  }
+
+  .btn-discard:hover {
+    background-color: #1363DF;
+  }
+
+  .btn-save {
+    background-color: #1363df;
+  }
+  .btn-save:hover {
+    background-color: #07347f;
+  }
+
+  .form-control:disabled {
+    background: #272934 !important;
+  }
+
+}
